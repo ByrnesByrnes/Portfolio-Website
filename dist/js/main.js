@@ -18,9 +18,7 @@ function toggleMenu() {
     menu.classList.add("show");
     menuNav.classList.add("show");
     menuBranding.classList.add("show");
-    setTimeout(() => {
-      navItems.forEach(item => item.classList.add("show"));
-    }, 200);
+    navItems.forEach(item => item.classList.add("show"));
 
     // Set Menu State
     showMenu = true;
