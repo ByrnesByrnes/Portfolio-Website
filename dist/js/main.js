@@ -33,7 +33,7 @@ function navigation() {
     $("h2.navigation-guide2")
       .removeClass("navigation-guide2")
       .addClass("navigation-guide");
-  }, 7000);
+  }, 5000);
 }
 navigation();
 $("a.nav-link").on("click", function(e) {

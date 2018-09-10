@@ -71,16 +71,17 @@
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     z-index: 10;
-    background: rgba(201, 201, 201, 0.9);
+    opacity: 0.95;
+    background: url("../img/nav-image.jpg");
+    background-size: cover;
     transform: translate3d(-100%, 0, 0);
     transition: all 0.5s ease-in-out; }
     .menu-branding.show {
       z-index: 5;
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
-      width: 250px;
-      height: 250px;
-      background: url("../img/cargarage.jpg");
+      width: 300px;
+      height: 300px;
       background-size: cover;
       border-radius: 50%; }
   .menu .nav-item {
@@ -188,7 +189,7 @@ body {
   line-height: 1.5; }
   body#bg-img {
     position: relative;
-    background: url(../img/cloudylake.jpg);
+    background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
@@ -223,21 +224,6 @@ h3 {
 b {
   color: #b80303; }
 
-img.index-image {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0.4;
-  box-shadow: 0 0 20px 20px black;
-  border-radius: 10px;
-  animation: shake 15s;
-  animation-iteration-count: infinite;
-  transition: all 0.5s ease-in-out; }
-
 a {
   color: #fff;
   text-decoration: none;
@@ -264,9 +250,10 @@ main {
   main#home {
     overflow: hidden; }
 
-h2.navigation-guide {
-  visibility: hidden;
+h2 {
   transition: all 0.5s ease-in-out; }
+  h2.navigation-guide {
+    visibility: hidden; }
 
 .about-info {
   display: grid;
@@ -276,8 +263,10 @@ h2.navigation-guide {
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: #b80303 3px solid; }
+    border: #b80303 5px solid; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -322,9 +311,10 @@ div.item {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    opacity: 0.8;
     transition: all 0.5s ease-in-out; }
     div.item img:hover {
-      opacity: 0.5;
+      opacity: 1;
       border-color: #b80303; }
   div.item:hover {
     box-shadow: 3px 3px 6px black; }
@@ -411,7 +401,7 @@ div.item {
     height: 25vh;
     transform: translate3d(100%, -100%, 0); }
     .menu-branding .portrait {
-      background: url("../img/cargarage.jpg");
+      background: url("../img/nav-image.jpg");
       width: 150px;
       height: 150px;
       background-size: cover; }

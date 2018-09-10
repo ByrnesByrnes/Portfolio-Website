@@ -40,22 +40,6 @@ b {
   color: $secondary-color;
 }
 
-img.index-image {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0.4;
-  box-shadow: 0 0 20px 20px black;
-  border-radius: 10px;
-  animation: shake 15s;
-  animation-iteration-count: infinite;
-  @include easeOut;
-}
-
 a {
   color: #fff;
   text-decoration: none;
@@ -93,10 +77,13 @@ main {
   }
 }
 // Navgation guide
-h2.navigation-guide {
-  visibility: hidden;
+h2 {
   @include easeOut;
+  &.navigation-guide {
+    visibility: hidden;
+  }
 }
+
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -107,8 +94,10 @@ h2.navigation-guide {
   .bio-image {
     grid-area: bioimage;
     margin: auto;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    border: $secondary-color 3px solid;
+    border: $secondary-color 5px solid;
   }
 
   .bio {
@@ -164,11 +153,11 @@ div.item {
     width: 100%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-
+    opacity: 0.8;
     @include easeOut;
 
     &:hover {
-      opacity: 0.5;
+      opacity: 1;
       border-color: $secondary-color;
     }
   }
