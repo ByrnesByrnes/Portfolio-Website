@@ -1,8 +1,10 @@
-$primary-color: #444;
-$secondary-color: #eece1a;
+$primary-color: rgb(201, 201, 201);
+$secondary-color: rgb(184, 3, 3);
 $show-home-image: true;
 $home-image: url(../img/cloudylake.jpg);
-$background-opacity: 0.9;
+$background-opacity: 0.6;
+$text-shadow: 3px 3px 6px darken($secondary-color, 50);
+$box-shadow: 0px 0px 6px darken($secondary-color, 50);
 
 @mixin easeOut {
   transition: all 0.5s ease-in-out;
@@ -11,6 +13,7 @@ $background-opacity: 0.9;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
+      position: relative;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
@@ -32,9 +35,45 @@ $background-opacity: 0.9;
 // Set Text Color
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
-    @return rgb(0, 0, 0);
+    @return rgb(37, 37, 37);
   } @else {
     @return rgb(255, 255, 255);
+  }
+}
+// Shake Rotate feature
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-5deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(5deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(5deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-5deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-5deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(5deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(0deg);
   }
 }
 

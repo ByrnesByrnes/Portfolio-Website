@@ -2,7 +2,7 @@
 
 .menu-btn {
   position: absolute;
-  z-index: 3;
+  z-index: 5;
   right: 35px;
   top: 35px;
   cursor: pointer;
@@ -12,7 +12,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: set-text-color($primary-color);
+    background: rgb(184, 3, 3);
     @include easeOut;
   }
 
@@ -76,12 +76,14 @@
 
   // Branding Side
   &-branding {
+    z-index: 10;
     background: rgba($primary-color, 0.9);
     transform: translate3d(-100%, 0, 0);
     @include easeOut;
 
     &.show {
       // Slide in from bottom
+      z-index: 5;
       transform: translate3d(0, 0, 0);
     }
 
@@ -91,7 +93,7 @@
       background: url("../img/cargarage.jpg");
       background-size: cover;
       border-radius: 50%;
-      border: solid 3px $secondary-color;
+      //border: solid 5px $secondary-color;
     }
   }
 
@@ -110,17 +112,23 @@
   }
 
   .nav-link {
+    z-index: 1000;
     display: inline-block;
     position: relative;
     font-size: 2rem;
+    font-weight: bold;
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
     color: set-text-color($primary-color);
     text-decoration: none;
+    text-shadow: none;
     @include easeOut;
 
     &:hover {
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: $text-shadow;
       color: $secondary-color;
     }
   }
